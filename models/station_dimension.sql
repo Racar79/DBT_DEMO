@@ -6,8 +6,7 @@ START_STATION_NAME,
 START_LAT,
 START_LON
 
-FROM {{ source('demo', 'bike_table') }}
-LIMIT 10
+FROM {{ ref('stg_bike') }}
 
 )
 

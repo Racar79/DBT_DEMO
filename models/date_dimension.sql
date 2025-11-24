@@ -14,7 +14,7 @@ MONTH(TO_TIMESTAMP(STARTED_AT)) AS MONTH_STARTED_AT,
  {{station('STARTED_AT')}} as station_of_year
 
 from
-{{ source('demo', 'bike_table') }}
+{{ ref('stg_bike') }}
 )
 
 SELECT * FROM CTE
